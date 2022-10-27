@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: hsl(30, 38%, 92%);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .container {
+      display: flex;
+      margin: 60px auto;
+      font-family: 'Montserrat', sans-serif;
+      font-family: 'Fraunces', serif;
+      width: 600px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .image {
+      flex-basis: 50%;
+      background-image: url(../product-preview-card-component-main/images/image-product-desktop.jpg);
+      background-size: cover;
+    }
+
+    .info {
+      flex-basis: 50%;
+      background-color: hsl(0, 0%, 100%);
+      padding: 30px;
+    }
+
+    @media (max-width:768px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 669px;
+        max-width: 95%;
+      }
+
+      .image {
+        flex-basis: 30%;
+        background-size: cover;
+        background-image: url(../product-preview-card-component-main/images/image-product-mobile.jpg);
+      }
+
+      .info {
+        flex: 1;
+      }
+    }
+
+    .info p:first-of-type {
+      color: hsl(158, 36%, 37%);
+      font-size: 14px;
+      text-transform: uppercase;
+      /* margin: 10px 0 20px; */
+    }
+
+    .info p:last-of-type {
+      color: hsl(158, 36%, 37%);
+      font-size: 14px;
+    }
+
+    .info h2 {
+      font-weight: 900;
+      font-size: 33px;
+      margin: 20px 0;
+    }
+
+    .price {
+      margin: 25px 0;
+    }
+
+    .info .price span {
+      color: hsl(140, 80%, 6%);
+      font-size: 36px;
+      font-weight: 900;
+      margin-right: 20px;
+    }
+
+    .info .price del {
+      color: hsl(158, 36%, 37%);
+    }
+
+    .info .a {
+      padding: 20px;
+      background-color: hsl(140, 80%, 6%);
+      color: white;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .info a {
+      text-decoration: none;
+      color: white;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="image"></div>
+    <div class="info">
+      <p> Preview</p>
+      <h2> Gabrielle Essence Eau De Parfum</h2>
+      <p> A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</p>
+      <div class="price">
+        <span> $149.99</span>
+        <del>$169.99</del>
+      </div>
+      <div class="a">
+        <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+            fill="#FFF" />
+        </svg>
+        <a href="#"> Add to Cart</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/mosaied5566">mohamed saied</a>.
+  </div>
+</body>
+
+</html>
